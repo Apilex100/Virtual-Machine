@@ -1,2 +1,4 @@
-vm
+*.vm
+vmi
+ebasm
 status
