@@ -12,8 +12,8 @@ vmi: ./src/vmi.c ./src/vm.c
 .PHONY: examples
 examples: ./examples/fib.vm ./examples/123.vm
 
-./examples/fib.vm: ./examples/fib.ebasm 
+./examples/fib.vm: ebasm ./examples/fib.ebasm 
 	./ebasm ./examples/fib.ebasm ./examples/fib.vm
 
-./examples/123.vm: ./examples/123.ebasm 
+./examples/123.vm: ebasm ./examples/123.ebasm 
 	./ebasm ./examples/123.ebasm ./examples/123.vm
