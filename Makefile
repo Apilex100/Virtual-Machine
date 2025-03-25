@@ -4,10 +4,10 @@ LIBS=
 .PHONY: all
 all: ebasm vmi
 
-ebasm: ebasm.c vm.c 
-	$(CC) $(CFLAGS) -o ebasm ebasm.c $(LIBS)
-vmi: vmi.c vm.c 
-	$(CC) $(CFLAGS) -o vmi vmi.c $(LIBS)
+ebasm: ./src/ebasm.c ./src/vm.c 
+	$(CC) $(CFLAGS) -o ebasm ./src/ebasm.c $(LIBS)
+vmi: ./src/vmi.c ./src/vm.c 
+	$(CC) $(CFLAGS) -o vmi ./src/vmi.c $(LIBS)
 
 .PHONY: examples
 examples: ./examples/fib.vm ./examples/123.vm
